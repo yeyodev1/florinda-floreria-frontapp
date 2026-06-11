@@ -1,0 +1,38 @@
+// Typography
+$font-cursive: 'Alex Brush', cursive;
+$font-serif-classic: 'Book Antiqua', 'Crimson Text', serif;
+$font-serif-display: 'Playfair Display', serif;
+$font-sans: 'Montserrat', sans-serif;
+$font-sans-alt: 'Poppins', sans-serif;
+
+// Colors
+$color-charcoal: rgb(75, 75, 75); // #4b4b4b
+$color-charcoal-dark: darken($color-charcoal, 10%);
+$color-charcoal-light: lighten($color-charcoal, 15%);
+
+$color-mustard: #BBA83B; // CMYK C=21 M=29 Y=75 K=7 approx
+$color-mustard-light: lighten($color-mustard, 10%);
+
+// We use a softer beige for the main background to keep it elegant, 
+// and keep the exact CMYK derived color as an accent if needed.
+$color-beige: #FDFBF7; // Soft neutral beige
+$color-beige-dark: #DBCA58; // Exact CMYK conversion for accents
+
+$color-white: #ffffff;
+$color-black: #000000;
+
+// Spacing (Base 8px)
+$space-xs: 0.5rem;   // 8px
+$space-sm: 1rem;     // 16px
+$space-md: 2rem;     // 32px
+$space-lg: 4rem;     // 64px
+$space-xl: 8rem;     // 128px
+
+// Easing for Animations
+$ease-custom: cubic-bezier(0.77, 0, 0.175, 1);
+$ease-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+
+// Breakpoints
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-large: 1440px;

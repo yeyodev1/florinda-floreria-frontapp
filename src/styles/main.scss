@@ -1,0 +1,79 @@
+// Reset and Base Styles
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px; // 1rem = 16px
+  scroll-behavior: auto; // Required for Lenis
+  scrollbar-width: none; // Firefox
+  -ms-overflow-style: none; // IE 10+
+  
+  &::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+  }
+}
+
+body {
+  font-family: $font-sans;
+  background-color: $color-beige;
+  color: $color-charcoal;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-serif-display;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: $space-sm;
+  color: $color-charcoal;
+}
+
+h1 {
+  font-size: 3rem;
+  
+  @media (min-width: $bp-tablet) {
+    font-size: 5rem;
+  }
+}
+
+h2 {
+  font-size: 2.5rem;
+  
+  @media (min-width: $bp-tablet) {
+    font-size: 3.5rem;
+  }
+}
+
+p {
+  margin-bottom: $space-sm;
+  font-family: $font-sans-alt;
+  color: $color-charcoal-light;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s $ease-smooth;
+  
+  &:hover {
+    color: $color-mustard;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
