@@ -36,16 +36,22 @@ onMounted(() => {
       duration: 0.8,
       ease: 'power3.inOut'
     })
-    .from('.menu__link-text', {
-      y: 150,
-      opacity: 0,
+    .fromTo('.menu__link-text', {
+      y: 100,
+      opacity: 0
+    }, {
+      y: 0,
+      opacity: 1,
       duration: 0.8,
       stagger: 0.1,
       ease: 'power4.out'
     }, "-=0.4")
-    .from('.menu__footer', {
+    .fromTo('.menu__footer', {
       opacity: 0,
-      y: 20,
+      y: 20
+    }, {
+      opacity: 1,
+      y: 0,
       duration: 0.5,
       ease: 'power2.out'
     }, "-=0.4")
@@ -133,9 +139,11 @@ onUnmounted(() => {
       transition: filter 0.4s ease;
     }
     
-    .header__toggle-text,
-    .line {
+    .header__toggle-text {
       color: $color-white !important;
+    }
+
+    .line {
       background-color: $color-white !important;
     }
   }
@@ -236,6 +244,15 @@ onUnmounted(() => {
   flex-direction: column;
   justify-content: center;
   padding: $space-xl;
+  pointer-events: none;
+  visibility: hidden;
+  transition: visibility 0s 0.8s; // Waits for the GSAP reverse animation to finish before hiding
+}
+
+.header--open .menu-overlay {
+  pointer-events: auto;
+  visibility: visible;
+  transition: visibility 0s 0s; // Visible immediately when opening
 }
 
 .menu {
