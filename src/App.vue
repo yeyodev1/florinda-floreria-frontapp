@@ -2,6 +2,7 @@
 import { useRoute } from 'vue-router'
 import gsap from 'gsap'
 import { useSmoothScroll } from '@/composables/useSmoothScroll'
+import ThePreloader from '@/components/layout/ThePreloader.vue'
 import TheHeader from '@/components/layout/TheHeader.vue'
 import TheFooter from '@/components/layout/TheFooter.vue'
 
@@ -36,6 +37,7 @@ const onEnter = (el: Element, done: () => void) => {
 
 <template>
   <div class="app-wrapper">
+    <ThePreloader />
     <TheHeader />
     <main class="main-content">
       <router-view v-slot="{ Component }">
